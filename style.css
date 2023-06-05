@@ -1,0 +1,150 @@
+/* Reset some default styles for the navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  /* Styles for the logo element */
+  .logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  /* Styles for the right-aligned elements */
+  .right-aligned {
+    display: flex;
+  }
+  
+  .button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #f58742;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #e5773c;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  h1,
+  p {
+    color: #333;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+    flex: 0 0 300px;
+    border: 2px solid tomato;
+    border-radius: 4px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    height: 200px;
+    width:fit-content;
+    max-width: 100%;
+    border:2px solid tomato;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .card-content {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .card:hover .card-content {
+    opacity: 1;
+  }
+  
+  .card h2 {
+    text-align: center;
+    color: #fff;
+  }
+  
+  .card p {
+    color: #fff;
+  }
+  
+  .additional-content {
+    display: none;
+  }
+  
+  .card:hover .additional-content {
+    display: block;
+  }
+  
+  .ingredients,
+  .instructions {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Dark mode styles */
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  nav {
+    background-color: #222;
+  }
+  
+  .button {
+    background-color: #ff8359;
+  }
+  
+  .button:hover {
+    background-color: #ff734d;
+  }
+  
+  .container {
+    color: #fff;
+  }
+  
+  .card {
+    border-color: #555;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .card h2 {
+    color: #fff;
+  }
+  
+  .card p {
+    color: #ccc;
+  }
+  
+  .card img {
+    border-color: #555;
+  }
+  

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .recipe-card {
+      width: 300px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .recipe-card img {
+      width: 100%;
+      height: auto;
+    }
+    .recipe-card button {
+      margin-top: 10px;
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      width: 80%;
+      border: 1px solid #888;
+      border-radius: 4px;
+    }
+    .modal-close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .modal-close:hover,
+    .modal-close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .modal-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .modal-content p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="recipeContainer"></div>
+
+  <div class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title"></h2>
+      <p class="modal-author"></p>
+      <img class="modal-image" src="" alt="Recipe Image">
+      <h3>Instructions:</h3>
+      <p class="modal-instructions"></p>
+      <h3>Ingredients:</h3>
+      <ul class="modal-ingredients"></ul>
+    </div>
+  </div>
+
+  <script>
+    var recipeData = [
+      {
+        "name": "Recipe Name 1",
+        "author": "Lori Johnson",
+        "image": "recipe-image1.jpg",
+        "instructions": "Recipe instructions go here...",
+        "ingredients": ["Ingredient 1", "Ingredient 2", "Ingredient 3"]
+      },
+      {
+        "name": "Recipe Name 2",
+        "author": "Author 2",
+        "image": "recipe-image2.jpg",
+        "instructions": "Recipe instructions go here...",
+        "ingredients": ["Ingredient 1", "Ingredient 2", "Ingredient 3"]
+      }
+      // Add more recipe objects as needed
+    ];
+
+    var recipeContainer = document.getElementById("recipeContainer");
+    var modal = document.querySelector(".modal");
+    var modalClose = document.querySelector(".modal-close");
+    var modalTitle = document.querySelector(".modal-title");
+    var modalAuthor = document.querySelector(".modal-author");
+    var modalImage = document.querySelector(".modal-image");
+    var modalInstructions = document.querySelector(".modal-instructions");
+    var modalIngredients = document.querySelector(".modal-ingredients");
+
+    // Dynamically generate recipe cards
+    recipeData.forEach(function(recipe) {
+      var card = document.createElement("div");
+      card.className = "recipe-card";
+
+      var name = document.createElement("p");
+      name.textContent = recipe.name;
+      card.appendChild(name);
+
+      var author = document.createElement("p");
+      author.textContent = recipe.author;
+      card.appendChild(author);
+
+      var image = document.createElement("img");
+      image.src = recipe.image;
+      image.alt = "Recipe Image";
+      card.appendChild(image);
+
+      var button = document.createElement("button");
+      button.textContent = "View Details";
+      button.addEventListener("click", function() {
+        openModal(recipe);
+      });
+      card.appendChild(button);
+
+      recipeContainer.appendChild(card);
+    });
+
+    modalClose.addEventListener("click", closeModal);
+    window.addEventListener("click", outsideClick);
+
+    function openModal(recipe) {
+      modalTitle.textContent = recipe.name;
+      modalAuthor.textContent = recipe.author;
+      modalImage.src = recipe.image;
+      modalInstructions.textContent = recipe.instructions;
+      modalIngredients.innerHTML = recipe.ingredients.map(function(ingredient) {
+        return "<li>" + ingredient + "</li>";
+      }).join("");
+
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function outsideClick(event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
