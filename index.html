@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
   <nav>
-    <div class="logo">Logo</div>
+    <div class="logo"><a href="index.html">Flavour Share</a></div>
     <div class="right-aligned">
-      <a href="#" class="button">Post</a>
+      <a href="#" class="button">Posts</a>
+      <a href="index.html" class="button">Write</a>
       <a href="#" class="button">Login</a>
-      <button id="dark-mode"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmJJREFUSEuNluF1GkEMhL+pAFyBcQWQCgwVxK4AqCC4gjgVBCqAdOBUAO6AVBBSQXAFytPu3t3esQfh175Fq5FGI+lE9yfA0mU45xe5sRCWTPMzNC/8/uav7SigJw+5ozyqAJyCuwRoZzDEmAMrYAjc9eUT4qyd/h/AAvieHPvzD9Awz+AqvRnLtV0W3Q6YJyp+CcYG76BpA3A1l4bGgtkr8DVGjGdxBvaId4xpuWT9YFkNgpE72Cf4GXDwqIXtrQBwW3BCbUnZweAR+AZ4Jv7z4v4FTqCHRi25lNt59chUI2G/LVIzEpyrdgCOwBi0FLbL7gv1a2s4p2gF5qr5AVp01OK12DqQYGaxLpUqL5Jqt2NtGSjx4ub0BDepcU4Y94KdiWWxwwu1jhnEPw6CRxMzPzdR1K8msegMgF2iq54qfT2Rd/Ia+AK8gNb5nMnGgPfBWwI5BSGIn5jO5QZsz6JIkdhg8nr0TSlXlWfwOQM+NAExSTnfVeRU1Yp6D3LkoUBRB1BPYCvEBNOgk8EfV2IXwAvhzu+BZ8CpuI0TLVzWIxNrzOXMC+HcGdeChUU5ngSfTJzbu+Eq4gKxxWIfkd6W9sERNBZ2NPGMBcpKAzG/dbq2CB/vyyDlqtEL0vUiumR9gnpDvQo2rSXXuHZbz/gpXW3S7mh2Q89W9IdrxDzyaMdYfB3T2XtiKphYmFX6APNuf8sXZqnIXSo8sp1g0BJtvrninlgIO11mWU3Tqzs2YHrELjvXuEftdTqA+RA81+Ok0Dn5qLiuyot92+Ot+ibIgq7qXQ21m9Ox+pIpf1W0gf8B2cMAMbZ7R6YAAAAASUVORK5CYII="/></button>
     </div>
   </nav>
-  
+
   <div class="container">
     <h1>Welcome to FlavourShare</h1>
     <p>Discover and share amazing recipes from around the world.</p>
-    
+    <br><br><br>
     <div class="card-container" id="recipe-cards">
       <div class="card">
         <div class="preview">
-          <h2>Caprese Salad</h2>      
+          <img
+            src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80"
+            alt="" srcset="">
+
+          <h2>Caprese Salad</h2>
           <p>Lord Funkopops</p>
-          <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="" srcset="">
-          <button class="openModal">View</button>  
-        </div>    
-        
-        <dialog class="myModal">  
+          <button class="openModal">View</button>
+        </div>
+
+        <dialog class="myModal">
           <h2>Chicken Parmesan</h2>
           <h3>by Lori Johnson</h3>
-          <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80" alt="" srcset="">
+          <img
+            src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1078&q=80"
+            alt="" srcset="">
           <ul class="ingredients">
             <h3>Ingredients</h3>
             <li>Lorem, isum dolor.</li>
@@ -48,16 +55,21 @@
       </div>
       <div class="card">
         <div class="preview">
-          <h2>Chicken Parmesan</h2>      
-          <p>Lori Johnson</p>
-          <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" srcset="">
-          <button class="openModal">View</button>  
-        </div>    
-        
-        <dialog class="myModal">  
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
           <h2>Chicken Parmesan</h2>
-    
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
           <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
           <ul class="ingredients">
             <h3>Ingredients</h3>
             <li>Lorem, ipsum dolor.</li>
@@ -75,11 +87,639 @@
           <button class="closeModal">X</button>
         </dialog>
       </div>
-     
+      <div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div><div class="card">
+        <div class="preview">
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+
+          <h2>Chicken Parmesan</h2>
+          <p>Lori Johnson</p>
+          <button class="openModal ">View</button>
+        </div>
+
+        <dialog class="myModal">
+          <h2>Chicken Parmesan</h2>
+          <h3>by Lori Johnson</h3>
+          <img
+            src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="" srcset="">
+          <ul class="ingredients">
+            <h3>Ingredients</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ul>
+          <ol class="instructions">
+            <h3>Instructions</h3>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Lorem, ipsum dolor.</li>
+          </ol>
+          <button class="closeModal">X</button>
+        </dialog>
+      </div>
 
     </div>
   </div>
 
   <script src="scripts.js"></script>
 </body>
+
 </html>
