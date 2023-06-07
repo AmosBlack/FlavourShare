@@ -2,23 +2,34 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <title>FlavourShare|Recipes</title>
 </head>
 
 <body>
   <nav>
     <div class="logo"><a href="index.html">Flavour Share</a></div>
     <div class="right-aligned">
-      <a href="#" class="button">Posts</a>
-      <a href="index.html" class="button">Write</a>
+      <a href="posts.html" class="button">Posts</a>
+      <a href="write.html" class="button">Write</a>
       <a href="#" class="button">Login</a>
     </div>
   </nav>
 
   <div class="container">
-    <h1>Welcome to FlavourShare</h1>
+    <h1>Recipes</h1>
     <p>Discover and share amazing recipes from around the world.</p>
-    <br><br><br>
+    
+    <br><br>
+    <label for="search">
+      Search
+      <input type="text" placeholder="Filter Tags" id="search">
+      <button id="search">🔍</button>
+    </label>
+    <br>
     <div class="card-container" id="recipe-cards">
 
 

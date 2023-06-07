@@ -75,6 +75,7 @@ function recipeCardCreate(recipe) {
   const image = document.createElement('img')
   image.src = recipe.image
   image.alt = "image"
+  image.loading = "lazy"
   preview.appendChild(image)
 
   //title

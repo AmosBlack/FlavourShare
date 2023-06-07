@@ -19,10 +19,7 @@ nav {
   align-items: center;
   background-color: #222;
   padding: 10px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
+  width: 100%; 
   z-index: 1;
 }
 
@@ -66,7 +63,7 @@ nav {
   text-align: center;
 }
 
-.card-container {
+.card-container,.recipe-form-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -256,4 +253,24 @@ h3{
 
 .card:hover .openModal {
   opacity: 1;
+}
+
+input[type="text"]{
+  color: #ccc;
+  font-weight: 700;
+  background-color: #444;
+  border-radius: 4px;
+  border:none;
+  border-bottom: 2px solid white;
+  padding: 5px;
+}
+
+button{
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+}
+
+button:hover{
+  cursor: pointer;
 }

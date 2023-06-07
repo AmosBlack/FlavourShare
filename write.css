@@ -1,0 +1,20 @@
+.recipe-container{
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    max-width: 320px;
+    text-align: center;
+    position: relative;
+}
+
+#recipe-form{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+input{
+    text-align: center;
+    font-size: 1em;
+    margin: 5px;
+    
+}
