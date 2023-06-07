@@ -20,22 +20,22 @@
     <div class="recipe-container">
         <h1>Write your recipe</h1>
         <form action="" id="recipe-form">
-            <input type="text" name="title" id="r-title" placeholder="Title">
-            <input type="text" name="author" id="r-author" placeholder="Author">
+            <input type="text" name="title" id="r-title" placeholder="Title" required>
+            <input type="text" name="author" id="r-author" placeholder="Author" required>
             <form action="" id="ingred-form">
                 <input type="text" name="ingredient" id="r-ingredient" placeholder="Ingredient">
                 <button id="ingred-click">+</button>
+                <ul id="ingredients-list">
+                </ul>
             </form>
             <form action="" id="instru-form">
                 <input type="text" name="ingredient" id="r-instruction" placeholder="Instruction">
                 <button id="instru-click">+</button>
+                <ul id="instructions-list">
+                </ul>
             </form>
-            <input type="submit" value="Publish">
-
-
-            
+            <input type="submit" value="Publish">            
         </form>
     </div>
-      
-</body>
+    <script src="./scripts/write.js" type="module"></script>
 </html>

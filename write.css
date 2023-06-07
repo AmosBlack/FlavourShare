@@ -1,20 +1,94 @@
-.recipe-container{
-    display: flex;
-    flex-direction: column;
-    margin: 25px auto;
-    max-width: 320px;
-    text-align: center;
-    position: relative;
+*{
+font-weight: 800;
+
+
 }
 
-#recipe-form{
+/* Recipe container */
+.recipe-container {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
     font-weight: 800;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-input{
-    text-align: center;
-    font-size: 1em;
-    margin: 5px;
+/* Title and author inputs */
+#r-title,
+#r-author {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Ingredient and instruction inputs */
+#r-ingredient,
+#r-instruction {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Ingredient and instruction add buttons */
+#ingred-click,
+#instru-click {
+    background-color: #f58742;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease 0.2s;
     
+
+}
+
+#ingred-click:hover,
+#instru-click:hover{
+    background-color: #e5773c;
+
+}
+
+/* Publish button */
+input[type="submit"] {
+    background-color: #f58742;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #e5773c;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ul li {
+    padding: 5px;
+    border-radius: 3px;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    transition:ease-in-out  0.1s;
+
+}
+
+ul li:hover {
+    cursor: pointer;
 }
