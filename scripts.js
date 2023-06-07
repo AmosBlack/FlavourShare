@@ -66,7 +66,7 @@ fetch('data.json')
       const instructionsList = document.createElement("ol")
       instructionsList.classList.add("instructions")
       instructionsList.appendChild(instructionsHeader)
-      for(var i=0;i<recipe.ingredients.length;i++){
+      for(var i=0;i<recipe.instructions.length;i++){
         var listEl = document.createElement("li")
         listEl.innerHTML = recipe.instructions[i]
         instructionsList.appendChild(listEl)
