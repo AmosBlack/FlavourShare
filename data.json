@@ -116,6 +116,81 @@
             "Serve hot with pasta or a side salad."
           ],
           "image": "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        },
+        {
+          "name": "Classic Margherita Pizza",
+          "author": "Emily Rodriguez",
+          "ingredients": [
+            "1 pizza dough",
+            "1/2 cup tomato sauce",
+            "8 ounces fresh mozzarella cheese, sliced",
+            "1/4 cup fresh basil leaves",
+            "2 tablespoons olive oil",
+            "Salt and pepper to taste"
+          ],
+          "instructions": [
+            "Preheat the oven to 475°F (245°C).",
+            "Roll out the pizza dough into a round shape and place it on a baking sheet.",
+            "Spread the tomato sauce evenly over the dough, leaving a border around the edges.",
+            "Arrange the mozzarella slices on top of the sauce.",
+            "Tear the fresh basil leaves and sprinkle them over the cheese.",
+            "Drizzle olive oil over the pizza and season with salt and pepper.",
+            "Bake for 12-15 minutes, or until the crust is golden brown and the cheese is bubbly and slightly browned.",
+            "Remove from the oven and let it cool for a few minutes before slicing and serving."
+          ],
+          "image": "https://images.unsplash.com/photo-1556909116-2818f0e21c6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80"
+        },
+        {
+          "name": "Vegetable Stir-Fry",
+          "author": "David Thompson",
+          "ingredients": [
+            "2 cups mixed vegetables (such as broccoli, bell peppers, carrots, and snow peas)",
+            "2 tablespoons soy sauce",
+            "1 tablespoon sesame oil",
+            "2 cloves garlic, minced",
+            "1 teaspoon grated ginger",
+            "2 tablespoons vegetable oil",
+            "Salt and pepper to taste"
+          ],
+          "instructions": [
+            "Heat vegetable oil in a wok or large skillet over high heat.",
+            "Add the garlic and ginger and stir-fry for 1 minute.",
+            "Add the mixed vegetables and stir-fry for 3-4 minutes, or until crisp-tender.",
+            "In a small bowl, whisk together soy sauce and sesame oil.",
+            "Pour the sauce over the vegetables and stir to combine.",
+            "Season with salt and pepper to taste.",
+            "Continue cooking for 1-2 minutes, or until the sauce thickens slightly.",
+            "Remove from heat and serve hot as a side dish or over steamed rice."
+          ],
+          "image": "https://images.unsplash.com/photo-1533743983668-1b72a72ed977?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80"
+        },
+        {
+          "name": "Spaghetti Bolognese",
+          "author": "Laura Thompson",
+          "ingredients": [
+            "8 ounces spaghetti", 
+            "1 tablespoon olive oil",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "8 ounces ground beef",
+            "1 cup marinara sauce",
+            "1/2 cup beef broth",
+            "1 teaspoon dried basil",
+            "1 teaspoon dried oregano",
+            "Salt and pepper to taste",
+            "Grated Parmesan cheese for serving"
+          ],
+          "instructions": [
+            "Cook the spaghetti according to package instructions. Drain and set aside.",
+            "Heat olive oil in a large skillet over medium heat.",
+            "Add the diced onion and minced garlic. Cook until the onion is translucent and the garlic is fragrant.",
+            "Add the ground beef to the skillet and cook until browned. Break it up into small pieces using a spatula.",
+            "Stir in the marinara sauce, beef broth, dried basil, dried oregano, salt, and pepper.",
+            "Simmer for 10-15 minutes, or until the sauce has thickened.",
+            "Serve the spaghetti with the Bolognese sauce on top. Sprinkle with grated Parmesan cheese.",
+            "Enjoy hot!"
+          ],
+          "image": "https://images.unsplash.com/photo-1621494454189-08c7d68e4a1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80"
         }
       
   ]

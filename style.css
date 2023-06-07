@@ -4,6 +4,7 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+  font-size: 90%;
 }
 
 * {
@@ -100,7 +101,6 @@ nav {
 }
 dialog {
   background-color: rgba(0, 0, 0, 0.9); 
-  position: relative;
   width: 80%;
   max-width: 400px;
   max-height: 80vh;
