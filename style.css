@@ -1,14 +1,16 @@
 /* Reset some default styles for the navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:wght@100&family=Space+Mono&family=Ubuntu:wght@300&display=swap');
+
 body {
   background-color: #333;
   color: #fff;
   margin: 0;
   padding: 0;
-  font-size: 90%;
 }
 
 * {
-  font-family: sans-serif;
+  font-family: 'Poppins';
 }
 
 nav {
@@ -48,7 +50,8 @@ nav {
   padding: 8px 16px;
   background-color: #f58742;
   text-decoration: none;
-  color: #fff;
+  color: #000000;
+  font-weight: bolder;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
@@ -82,6 +85,9 @@ nav {
   overflow: hidden;
 }
 
+.preview{
+  font-size: 80%;
+}
 
 .openModal,
 .closeModal {
@@ -95,8 +101,7 @@ nav {
 
 .openModal:hover,
 .closeModal:hover {
-  background-color: rgba(229, 119, 60,0.9);
-  
+  background-color: rgba(229, 119, 60,0.95);  
   cursor: pointer;
 }
 dialog {
@@ -146,6 +151,12 @@ h3,
 p {
   margin: 0;
   color: #fff;
+  font-weight: 800;
+}
+
+h3{
+  text-decoration: underline;
+
 }
 
 .ingredients,
