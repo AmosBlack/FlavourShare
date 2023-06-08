@@ -39,24 +39,24 @@ ingredientsButton.addEventListener("click",() => {
     ingredientsArr.push(ingredientsInput.value)
     console.log(ingredientsArr)
     ingredientsInput.value = ""
-    appendItemToHTMLArray(ingredientsArr,ingredientsArrEl)
+    // appendItemToHTMLArray(ingredientsArr,ingredientsArrEl)
 })
 
 instructionsButton.addEventListener("click",() => {
     instructionsArr.push(instructionsInput.value)
     instructionsInput.value = ""
-    appendItemToHTMLArray(instructionsArr,instructionsArrEl)
+    // appendItemToHTMLArray(instructionsArr,instructionsArrEl)
 })
 
 
 // function add element in ingredient input to list
 
 function appendItemToHTMLArray(arr,ul){
-    ul.innerHTML = ""
-    for(var i=0;i<arr.length;i++){
-        var li = document.createElement("li")
-        li.innerHTML = arr[i]
-        ul.appendChild(li)
-    }
+    // ul.innerHTML = ""
+    // for(var i=0;i<arr.length;i++){
+    //     var li = document.createElement("li")
+    //     li.innerHTML = arr[i]
+    //     ul.appendChild(li)
+    // }
 }
 
