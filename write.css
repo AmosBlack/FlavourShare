@@ -18,7 +18,7 @@ font-weight: 800;
 
 /* Title and author inputs */
 #r-title,
-#r-author {
+#r-author,#r-img {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;

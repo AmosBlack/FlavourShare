@@ -15,10 +15,9 @@ const firebaseConfig = {
 
 //app initialization
 const app = initializeApp(firebaseConfig)
-const DB = getDatabase(app)
-const auth = getAuth(app)
-const postsInDB = ref(DB, `/posts/`)
-
+export const DB = getDatabase(app)
+export const auth = getAuth(app)
+export const postsInDB = ref(DB, `/posts/`)
 
 
 
