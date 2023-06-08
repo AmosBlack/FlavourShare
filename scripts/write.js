@@ -1,18 +1,19 @@
+import { auth } from "./posts.js";
 import {DB, postsInDB} from "./posts.js"
 import {push} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
 //elements
-const title = document.getElementById("r-title")
-const author = document.getElementById("r-author")
-const submitButton = document.getElementById('r-submit')
-const image = document.getElementById("r-img")
+let title = document.getElementById("r-title")
+let author = document.getElementById("r-author")
+let submitButton = document.getElementById('r-submit')
+let image = document.getElementById("r-img")
 
-const ingredientsArrEl = document.getElementById("ingredients-list")
-const instructionsArrEl = document.getElementById("instructions-list")
-const ingredientsButton = document.getElementById("ingred-click")
-const instructionsButton = document.getElementById("instru-click")
-const ingredientsInput = document.getElementById("r-ingredient")
-const instructionsInput = document.getElementById("r-instruction")
+let ingredientsArrEl = document.getElementById("ingredients-list")
+let instructionsArrEl = document.getElementById("instructions-list")
+let ingredientsButton = document.getElementById("ingred-click")
+let instructionsButton = document.getElementById("instru-click")
+let ingredientsInput = document.getElementById("r-ingredient")
+let instructionsInput = document.getElementById("r-instruction")
 
 
 //mutable lists
@@ -21,17 +22,15 @@ let instructionsArr = []
 
 //push to firebase
 submitButton.addEventListener("click",()=>{
-    console.log("wow")
-    recipe = {
+    var recipe = {
         "author":author.value,
         "image":image.value,
         "ingredients":ingredientsArr,
         "instructions":instructionsArr,
         "name":title.value
     }
-    push(postsInDB,recipe,()=>{
-        console.log(recipe)
-    })
+    push(postsInDB,recipe)
+    clearForm()
 })
 
 //add item to list
@@ -59,3 +58,12 @@ function appendItemToHTMLArray(arr,ul){
     }
 }
 
+function clearForm(){
+    title.value = ""
+    author.value = ""
+    image.value = ""
+    ingredientsArrEl.innerHTML = ""
+    instructionsArrEl.innerHTML = ""
+    ingredientsInput.value = ""
+    instructionsInput.value = ""
+}
