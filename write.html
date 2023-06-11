@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="write.css">
 </head>
+
 <body>
     <nav>
         <div class="logo"><a href="index.html">Flavour Share</a></div>
         <div class="right-aligned">
-          <a href="index.html" class="button">Posts</a>
-          <a href="write.html" class="button">Write</a>
-          <a href="#" class="button">Login</a>
+            <a href="index.html" class="button">Posts</a>
+            <a href="write.html" class="button">Write</a>
+            <a href="#" class="button">Login</a>
         </div>
     </nav>
     <div class="recipe-container">
         <h1>Write your recipe</h1>
-            <input type="text" name="title" id="r-title" placeholder="Title" required>
-            <input type="text" name="author" id="r-author" placeholder="Author" required>
-            <input type="url" name="image" id="r-img" placeholder="Image URL" required>
-            <input type="text" name="ingredient" id="r-ingredient" placeholder="Ingredient">
-            <button id="ingred-click">+</button>
-            <ul id="ingredients-list">
-            </ul>
-            <input type="text" name="ingredient" id="r-instruction" placeholder="Instruction">
-            <button id="instru-click">+</button>
-            <ol id="instructions-list">
-            </ol>
-            <button class="button" id="r-submit">Publish</button>    
+        <input type="text" name="title" id="r-title" placeholder="Title" required>
+        <input type="text" name="author" id="r-author" placeholder="Author" required>
+        <input type="url" name="image" id="r-img" placeholder="Image URL" required>
+        <input type="text" name="ingredient" id="r-ingredient" placeholder="Ingredient">
+        <button id="ingred-click">+</button>      
+        <input type="text" name="ingredient" id="r-instruction" placeholder="Instruction">
+        <button id="instru-click">+</button>
+        <h3>Ingredients</h3>
+        <ul id="ingredients-list">
+            <p>nothing here yet ...</p>
+        </ul>
+        <h3>Instructions</h3>
+        <p>nothing here yet ...</p>
+
+        <ol id="instructions-list">
+        </ol>
+        <button class="button" id="r-submit">Publish</button>
     </div>
     <script src="./scripts/write.js" type="module"></script>
+
 </html>

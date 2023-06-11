@@ -1,116 +1,129 @@
 * {
-    font-weight: 800;
-  }
-  
-  /* Recipe container */
-  .recipe-container {
-    margin-top: 40px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
-    margin: 0 auto;
-    font-weight: 800;
-    font-size: 1.2rem;
-    text-align: center; /* Center the content */
-  }
-  
-  /* Title and author inputs */
-  #r-title,
-  #r-author,
-  #r-img {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 3px;
-    box-sizing: border-box; /* Include padding in the width calculation */
-  }
-  
+  font-weight: 800;
+}
 
-  /* Ingredient and instruction inputs */
-  #r-ingredient,
-  #r-instruction {
-    width: 85%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 3px;
-    flex-grow: 1;
-    box-sizing: border-box; /* Include padding in the width calculation */
-  }
-  
-  /* Ingredient and instruction add buttons */
-  #ingred-click,
-  #instru-click {
-    background-color: #f58742;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: ease 0.2s;
-  }
-  
-  #ingred-click:hover,
-  #instru-click:hover {
-    background-color: #e5773c;
-  }
-  
-  /* Publish button */
-  #r-submit {
-    background-color: #f58742;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: ease 0.2s;
-  }
-  
-  #r-submit:hover {
-    background-color: #e5773c;
-  }
-  ul{
-    list-style-type: none;
-  }
-  ul,ol {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center; /* Center the list items horizontally */
-  }
-  
-  li {
-    background-color: #555555;
-    padding: 5px;
-    margin:5px;
-    border-radius: 3px;
-    flex-grow: 1;
-    text-align: center;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-    transition: ease-in-out 0.1s;
-  }
-  
- li:hover {
-    cursor: pointer;
-  }
-  
-  input{
-    transition: ease 0.2s;
-  }
+/* Recipe container */
+.recipe-container {
+  background-color: rgb(175, 109, 82);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-align: center;
+  /* Center the content */
+}
 
- input:hover{
-    box-shadow: 1px 1px 0.5px 1.5px #e5773c;
- }
+/* Title and author inputs */
+#r-title,
+#r-author,
+#r-img {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  /* Include padding in the width calculation */
+}
 
- input[type="text"], input[type="url"]{
-    color: #f7f7f7;
-    font-weight: 700;
-    background-color: #555252;
-    border-radius: 4px;
-    border:none;
-    border-bottom: 2px solid white;
-    padding: 5px;
-  }
+/* Ingredient and instruction inputs */
+#r-ingredient,
+#r-instruction {
+  width: 85%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* Include padding in the width calculation */
+}
+
+/* Ingredient and instruction add buttons */
+#ingred-click,
+#instru-click {
+  background-color: #f58742;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+#ingred-click:hover,
+#instru-click:hover {
+  background-color: #e5773c;
+}
+
+/* Publish button */
+#r-submit {
+  background-color: #f58742;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+#r-submit:hover {
+  background-color: #e5773c;
+}
+
+ul,ol {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Center the list items horizontally */
+}
+
+ul li {
+  background-color: #f7f7f7;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 3px;
+  flex-grow: 1;
+  text-align: center;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  transition: ease-in-out 0.1s;
+}
+
+ol li{
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+
+li:hover {
+  cursor: pointer;
+}
+
+input {
+  transition: ease 0.2s;
+}
+
+input:hover {
+  box-shadow: 1px 1px 0.5px 1.5px #e5773c;
+}
+
+input[type="text"],
+input[type="url"] {
+  color: #333;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  border: none;
+  border-bottom: 2px solid #555;
+  padding: 5px;
+}

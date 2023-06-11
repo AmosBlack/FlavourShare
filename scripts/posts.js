@@ -30,6 +30,7 @@ onValue(postsInDB, function (snapshot) {
   //db data
   var posts = snapshot.val()
   var posts_arr = Object.values(posts)
+  console.log(posts_arr)
   //empty list
   recipeCardContainerClear(cardContainer)
   //create card for each recipe
@@ -106,7 +107,7 @@ function recipeCardCreate(recipe) {
     listEl.innerHTML = recipe.ingredients[i]
     ingredientsList.appendChild(listEl)
   }
-  
+
   //instructions
   const instructionsHeader = document.createElement("h3")
   instructionsHeader.innerHTML = "Instructions"

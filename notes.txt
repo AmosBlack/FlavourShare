@@ -1,7 +1,7 @@
 _/manual output
 _/json output
 _/firebase output
-_ firebase input
+_/firebase input
 _ authentication
 _ filtration
 _ pagination    

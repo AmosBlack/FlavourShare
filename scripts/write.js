@@ -1,6 +1,6 @@
 import { auth } from "./posts.js";
-import {DB, postsInDB} from "./posts.js"
-import {push} from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+import { DB, postsInDB } from "./posts.js";
+import { push } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
 //elements
 let title = document.getElementById("r-title")
@@ -21,44 +21,49 @@ let ingredientsArr = []
 let instructionsArr = []
 
 //push to firebase
-submitButton.addEventListener("click",()=>{
+submitButton.addEventListener("click", () => {
     var recipe = {
-        "author":author.value,
-        "image":image.value,
-        "ingredients":ingredientsArr,
-        "instructions":instructionsArr,
-        "name":title.value
+        "author": author.value,
+        "image": image.value,
+        "ingredients": ingredientsArr,
+        "instructions": instructionsArr,
+        "name": title.value
     }
-    push(postsInDB,recipe)
+    if(checkFormSubmittable()){
+    push(postsInDB, recipe)
     clearForm()
+    }
+    else{
+        alert("Form isnt filled properly")
+    }
 })
 
 //add item to list
-ingredientsButton.addEventListener("click",() => {
+ingredientsButton.addEventListener("click", () => {
     ingredientsArr.push(ingredientsInput.value)
     ingredientsInput.value = ""
-    appendItemToHTMLArray(ingredientsArr,ingredientsArrEl)
+    appendItemToHTMLArray(ingredientsArr, ingredientsArrEl)
 })
 
-instructionsButton.addEventListener("click",() => {
+instructionsButton.addEventListener("click", () => {
     instructionsArr.push(instructionsInput.value)
     instructionsInput.value = ""
-    appendItemToHTMLArray(instructionsArr,instructionsArrEl)
+    appendItemToHTMLArray(instructionsArr, instructionsArrEl)
 })
 
 
 // function add element in ingredient input to list
 
-function appendItemToHTMLArray(arr,ul){
+function appendItemToHTMLArray(arr, ul) {
     ul.innerHTML = ""
-    for(var i=0;i<arr.length;i++){
+    for (var i = 0; i < arr.length; i++) {
         var li = document.createElement("li")
         li.innerHTML = arr[i]
         ul.appendChild(li)
     }
 }
 
-function clearForm(){
+function clearForm() {
     title.value = ""
     author.value = ""
     image.value = ""
@@ -66,4 +71,20 @@ function clearForm(){
     instructionsArrEl.innerHTML = ""
     ingredientsInput.value = ""
     instructionsInput.value = ""
+}
+
+// check title, check author, if imgURL empty->default timing, better ingredients,instruction list view, editable ingredients list, editable instructions list
+
+function checkFormSubmittable(){
+    if(title.value!="" && author.value!="" && ingredientsArr.length != 0 && instructionsArr.length != 0){
+        if(image.value == ""){
+            image.value = "https://images.unsplash.com/photo-1614548539924-5c1f205b3747?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        }
+        return true
+    }
+    else{
+        return false
+    }
+
+
 }
