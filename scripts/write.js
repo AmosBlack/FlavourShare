@@ -62,43 +62,43 @@ instructionsButton.addEventListener("click", () => {
     }
 })
 
-let arr_li_item,editing
+let arr_li_item, editing
 function appendItemToHTMLArray(arr, ul, input) {
     ul.innerHTML = "";
-  
+
     for (var i = 0; i < arr.length; i++) {
-      (function (index) {
-        var arr_li_item = arr[index];
-  
-        var li = document.createElement("li");
-        li.innerHTML = arr_li_item;
-  
-        var dropdown = document.createElement("div");
-        dropdown.classList.add("dropdown");
-  
-        var delEl = document.createElement("button");
-        delEl.innerHTML = "DEL";
-        delEl.addEventListener("click", function () {
-          li.remove();
-          arr.splice(index, 1);
-        });
-  
-        var editEl = document.createElement("button");
-        editEl.innerHTML = "EDIT";
-        editEl.addEventListener("click", function () {
-          input.value = arr_li_item;
-          editing = true;
-        });
-  
-        dropdown.appendChild(delEl);
-        dropdown.appendChild(editEl);
-        li.appendChild(dropdown);
-  
-        ul.appendChild(li);
-      })(i);
+        (function (index) {
+            var arr_li_item = arr[index];
+
+            var li = document.createElement("li");
+            li.innerHTML = arr_li_item;
+
+            var dropdown = document.createElement("div");
+            dropdown.classList.add("dropdown");
+
+            var delEl = document.createElement("button");
+            delEl.innerHTML = "DEL";
+            delEl.addEventListener("click", function () {
+                li.remove();
+                arr.splice(index, 1);
+            });
+
+            var editEl = document.createElement("button");
+            editEl.innerHTML = "EDIT";
+            editEl.addEventListener("click", function () {
+                input.value = arr_li_item;
+                editing = true;
+            });
+
+            dropdown.appendChild(delEl);
+            dropdown.appendChild(editEl);
+            li.appendChild(dropdown);
+
+            ul.appendChild(li);
+        })(i);
     }
-  }
-  
+}
+
 
 
 function clearForm() {

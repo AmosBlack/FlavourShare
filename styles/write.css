@@ -76,18 +76,21 @@
 
 #r-submit:hover {
   background-color: var(--accent-color);
+  color: black;
 }
 
-ul, ol {
-  display: flex;  
+ul,
+ol {
+  display: flex;
   justify-content: center;
   padding: 0;
 }
 
-ul,ol {
+ul,
+ol {
   flex-wrap: wrap;
   justify-content: center;
-    display: flex;  
+  display: flex;
   justify-content: center;
   padding: 0;
 
@@ -97,7 +100,8 @@ ul,ol {
 }
 
 
-ul li, ol li {
+ul li,
+ol li {
   background-color: var(--background-color);
   padding: 5px;
   margin: 5px;
@@ -146,11 +150,15 @@ input[type="url"] {
 .dropdown button {
   background-color: var(--accent-color);
   margin: 5px;
+  padding:2px;
+  font-size: 0.6em;
 }
 
 .dropdown {
   display: none;
   align-items: flex-end;
+  flex-wrap: nowrap; /* Modified to prevent wrapping */
+  overflow-x: auto; /* Added to enable horizontal scrolling */
 }
 
 li:hover .dropdown {
@@ -163,6 +171,8 @@ li:hover .dropdown {
   filter: drop-shadow(0 0 9px rgba(229, 124, 35, 0.6));
 }
 
-.white{
+
+
+.white {
   color: white;
 }

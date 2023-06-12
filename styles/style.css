@@ -86,7 +86,7 @@ nav {
   border-radius: 4px;
   margin: 10px;
   background-color: #f2f2f2;
-  width: 250px;3
+  width: 250px;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
   overflow: hidden;
@@ -223,4 +223,8 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+input{
+  outline: none;
 }
