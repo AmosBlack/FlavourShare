@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #025464;
+  --secondary-color: #E57C23;
+  --accent-color: #E8AA42;
+  --background-color: #F8F1F1;
+}
+
 * {
   font-weight: 800;
   transition: ease 0.2s;
@@ -5,7 +12,7 @@
 
 /* Recipe container */
 .recipe-container {
-  background-color: rgb(175, 109, 82);
+  background-color: var(--primary-color);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -13,8 +20,8 @@
   margin: 20px auto;
   font-weight: 800;
   font-size: 1.2rem;
+  color: var(--background-color);
   text-align: center;
-  /* Center the content */
 }
 
 /* Title and author inputs */
@@ -27,7 +34,6 @@
   border: none;
   border-radius: 3px;
   box-sizing: border-box;
-  /* Include padding in the width calculation */
 }
 
 /* Ingredient and instruction inputs */
@@ -40,56 +46,55 @@
   border-radius: 3px;
   flex-grow: 1;
   box-sizing: border-box;
-  /* Include padding in the width calculation */
 }
 
 /* Ingredient and instruction add buttons */
 #ingred-click,
 #instru-click {
-  background-color: #f58742;
-  color: rgb(0, 0, 0);
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
-  transition: ease 0.2s;
 }
 
 #ingred-click:hover,
 #instru-click:hover {
-  background-color: #e5773c;
+  background-color: var(--accent-color);
 }
 
 /* Publish button */
 #r-submit {
-  background-color: #f58742;
-  color: rgb(0, 0, 0);
+  background-color: var(--secondary-color);
+  color: var(--background-color);
   border: none;
   padding: 10px 20px;
   border-radius: 3px;
   cursor: pointer;
-  transition: ease 0.2s;
 }
 
 #r-submit:hover {
-  background-color: #e5773c;
+  background-color: var(--accent-color);
 }
 
-ul,ol {
-  list-style-type: none;
+ul, ol {
   text-align: center;
+  display: flex;  
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
 }
 
 ul {
-  padding: 0;
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Center the list items horizontally */
 }
-
+ul h3{
+  color: var(--background-color);
+}
 ul li {
-  background-color: #f7f7f7;
+  background-color: var(--background-color);
   padding: 5px;
   margin: 5px;
   border-radius: 3px;
@@ -97,16 +102,17 @@ ul li {
   text-align: center;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
   transition: ease-in-out 0.1s;
+  color: var(--primary-color);
 }
 
-ol li{
+ol li {
   background-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
   padding: 5px;
   text-align: center;
   border-radius: 3px;
+  color: var(--background-color);
 }
-
 
 li:hover {
   cursor: pointer;
@@ -116,8 +122,10 @@ input {
   transition: ease 0.2s;
 }
 
-input:hover {
-  box-shadow: 1px 1px 0.5px 1.5px #e5773c;
+input:hover,
+input[type="text"]:hover,
+input[type="url"]:hover {
+  box-shadow: 1px 1px 0.5px 1.5px var(--secondary-color);
 }
 
 input[type="text"],
@@ -131,24 +139,23 @@ input[type="url"] {
   padding: 5px;
 }
 
-.dropdown button{
- background-color: #d6a082;
- margin: 5px;
- 
+.dropdown button {
+  background-color: var(--accent-color);
+  margin: 5px;
 }
 
-
-.dropdown{
+.dropdown {
   display: none;
   align-items: flex-end;
 }
 
-li:hover .dropdown{
+li:hover .dropdown {
   display: flex;
   justify-content: center;
   transition: ease 0.2s;
 }
 
-.dropdown button:hover{
-  filter: drop-shadow(0 0 9px rgba(214, 160, 130,0.6))
+.dropdown button:hover {
+  filter: drop-shadow(0 0 9px rgba(229, 124, 35, 0.6));
 }
+

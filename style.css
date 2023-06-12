@@ -2,6 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poppins:wght@100&family=Space+Mono&family=Ubuntu:wght@300&display=swap');
 
+:root {
+  --primary-color: #025464;
+  --secondary-color: #E57C23;
+  --accent-color: #E8AA42;
+  --background-color: #F8F1F1;
+}
+
 body {
   background-color: #eea959;
   color: #333;
