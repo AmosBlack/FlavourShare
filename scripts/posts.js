@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
-import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+import { getDatabase, ref, push, onValue, remove, onChildAdded } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 
 //app data
@@ -31,12 +31,14 @@ onValue(postsInDB, function (snapshot) {
   var posts = snapshot.val()
   var posts_arr = Object.values(posts)
   console.log(posts_arr)
+
   //empty list
   recipeCardContainerClear(cardContainer)
   //create card for each recipe
+  console.log(posts_arr.length)
   for (var i = 0; i < posts_arr.length; i++) {
-    var recipe = posts_arr[i]
-    recipeCardCreate(recipe)
+    var recipeUnit = posts_arr[i]
+    recipeCardCreate(recipeUnit)
 
   }
 })
@@ -102,10 +104,11 @@ function recipeCardCreate(recipe) {
   const ingredientsList = document.createElement("ul")
   ingredientsList.classList.add("ingredients")
   ingredientsList.appendChild(ingredientsHeader)
-  for (var i = 0; i < recipe.ingredients.length; i++) {
-    var listEl = document.createElement("li")
-    listEl.innerHTML = recipe.ingredients[i]
-    ingredientsList.appendChild(listEl)
+  var ingredientsListDB = Object.values(recipe.ingredients)
+  for (const ingredient of recipe.ingredients) {
+    const listEl = document.createElement("li");
+    listEl.innerHTML = ingredient;
+    ingredientsList.appendChild(listEl);
   }
 
   //instructions
@@ -114,11 +117,18 @@ function recipeCardCreate(recipe) {
   const instructionsList = document.createElement("ol")
   instructionsList.classList.add("instructions")
   instructionsList.appendChild(instructionsHeader)
-  for (var i = 0; i < recipe.instructions.length; i++) {
-    var listEl = document.createElement("li")
-    listEl.innerHTML = recipe.instructions[i]
-    instructionsList.appendChild(listEl)
+  for (const instruction of recipe.instructions) {
+    const listEl = document.createElement("li");
+    listEl.innerHTML = instruction;
+    instructionsList.appendChild(listEl);
   }
+
+
+  // for (var i = 0; i < instructionsListDB.length; i++) {
+  //   var listEl = document.createElement("li")
+  //   listEl.innerHTML = recipe.instructions[i]
+  //   instructionsList.appendChild(listEl)
+  // }
 
   //append to dialog
   dialog.appendChild(title.cloneNode(true))

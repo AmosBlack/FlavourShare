@@ -29,7 +29,7 @@ submitButton.addEventListener("click", () => {
         "instructions": instructionsArr,
         "name": title.value
     }
-    if(checkFormSubmittable()){
+    if(checkFormSubmittable(recipe)){
     push(postsInDB, recipe)
     clearForm()
     }
@@ -75,10 +75,10 @@ function clearForm() {
 
 // check title, check author, if imgURL empty->default timing, better ingredients,instruction list view, editable ingredients list, editable instructions list
 
-function checkFormSubmittable(){
+function checkFormSubmittable(recipe){
     if(title.value!="" && author.value!="" && ingredientsArr.length != 0 && instructionsArr.length != 0){
         if(image.value == ""){
-            image.value = "https://images.unsplash.com/photo-1614548539924-5c1f205b3747?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            recipe.image = "https://images.unsplash.com/photo-1614548539924-5c1f205b3747?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
         }
         return true
     }
