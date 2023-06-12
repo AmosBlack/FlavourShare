@@ -6,3 +6,5 @@ _ authentication
 _ filtration
 _ pagination    
 _ pdf generator
+_ error highlighing/no alerts
+_ recipe del
