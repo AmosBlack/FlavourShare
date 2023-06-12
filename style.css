@@ -11,6 +11,7 @@ body {
 
 * {
   font-family: 'Poppins';
+  user-select: none;
 }
 
 nav {
@@ -34,7 +35,7 @@ nav {
 }
 
 .logo a:hover {
-  color: #e5773c;
+  filter: drop-shadow(0 0 20px rgba(17, 17, 17, 0.9));
   cursor: pointer;
 }
 
@@ -51,10 +52,11 @@ nav {
   color: #000000;
   font-weight: bolder;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .button:hover {
+  filter: drop-shadow(0 0 9px rgba(2, 2, 2, 0.6));
   background-color: #e5773c;
 }
 

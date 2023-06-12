@@ -29,39 +29,77 @@ submitButton.addEventListener("click", () => {
         "instructions": instructionsArr,
         "name": title.value
     }
-    if(checkFormSubmittable(recipe)){
-    push(postsInDB, recipe)
-    clearForm()
+    if (checkFormSubmittable(recipe)) {
+        push(postsInDB, recipe)
+        clearForm()
     }
-    else{
+    else {
         alert("Form isnt filled properly")
     }
 })
 
 //add item to list
 ingredientsButton.addEventListener("click", () => {
-    ingredientsArr.push(ingredientsInput.value)
-    ingredientsInput.value = ""
-    appendItemToHTMLArray(ingredientsArr, ingredientsArrEl)
+    //check if input empty
+    if (!ifEmpty(ingredientsInput)) {
+        ingredientsArr.push(ingredientsInput.value)
+        ingredientsInput.value = ""
+        appendItemToHTMLArray(ingredientsArr, ingredientsArrEl, ingredientsInput)
+    }
+    else {
+        //replace alert with side modal
+        alert("false")
+    }
+
 })
 
 instructionsButton.addEventListener("click", () => {
-    instructionsArr.push(instructionsInput.value)
-    instructionsInput.value = ""
-    appendItemToHTMLArray(instructionsArr, instructionsArrEl)
+    //check if input empty
+    if (!ifEmpty(instructionsInput)) {
+        instructionsArr.push(instructionsInput.value)
+        instructionsInput.value = ""
+        appendItemToHTMLArray(instructionsArr, instructionsArrEl, instructionsInput)
+    }
 })
 
-
-// function add element in ingredient input to list
-
-function appendItemToHTMLArray(arr, ul) {
-    ul.innerHTML = ""
+let arr_li_item,editing
+function appendItemToHTMLArray(arr, ul, input) {
+    ul.innerHTML = "";
+  
     for (var i = 0; i < arr.length; i++) {
-        var li = document.createElement("li")
-        li.innerHTML = arr[i]
-        ul.appendChild(li)
+      (function (index) {
+        var arr_li_item = arr[index];
+  
+        var li = document.createElement("li");
+        li.innerHTML = arr_li_item;
+  
+        var dropdown = document.createElement("div");
+        dropdown.classList.add("dropdown");
+  
+        var delEl = document.createElement("button");
+        delEl.innerHTML = "DEL";
+        delEl.addEventListener("click", function () {
+          li.remove();
+          arr.splice(index, 1);
+        });
+  
+        var editEl = document.createElement("button");
+        editEl.innerHTML = "EDIT";
+        editEl.addEventListener("click", function () {
+          input.value = arr_li_item;
+          editing = true;
+        });
+  
+        dropdown.appendChild(delEl);
+        dropdown.appendChild(editEl);
+        li.appendChild(dropdown);
+  
+        ul.appendChild(li);
+      })(i);
     }
-}
+  }
+  
+
 
 function clearForm() {
     title.value = ""
@@ -75,16 +113,24 @@ function clearForm() {
 
 // check title, check author, if imgURL empty->default timing, better ingredients,instruction list view, editable ingredients list, editable instructions list
 
-function checkFormSubmittable(recipe){
-    if(title.value!="" && author.value!="" && ingredientsArr.length != 0 && instructionsArr.length != 0){
-        if(image.value == ""){
+function checkFormSubmittable(recipe) {
+    if (title.value != "" && author.value != "" && ingredientsArr.length != 0 && instructionsArr.length != 0) {
+        if (image.value == "") {
             recipe.image = "https://images.unsplash.com/photo-1614548539924-5c1f205b3747?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
         }
         return true
     }
-    else{
+    else {
         return false
     }
 
+}
 
+function ifEmpty(input) {
+    if (input.value == "") {
+        return true
+    }
+    else {
+        return false
+    }
 }
