@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #025464;
-  --secondary-color: #E57C23;
-  --accent-color: #E8AA42;
-  --background-color: #F8F1F1;
+  --primary-color: #454545;
+  --secondary-color: #FF6000;
+  --accent-color: #FFA559;
+  --background-color: #FFE6C7;
 }
 
 * {
@@ -79,21 +79,25 @@
 }
 
 ul, ol {
-  text-align: center;
   display: flex;  
   justify-content: center;
   padding: 0;
+}
+
+ul,ol {
+  flex-wrap: wrap;
+  justify-content: center;
+    display: flex;  
+  justify-content: center;
+  padding: 0;
+
+  text-align: center;
+
   list-style-type: none;
 }
 
-ul {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-ul h3{
-  color: var(--background-color);
-}
-ul li {
+
+ul li, ol li {
   background-color: var(--background-color);
   padding: 5px;
   margin: 5px;
@@ -159,3 +163,6 @@ li:hover .dropdown {
   filter: drop-shadow(0 0 9px rgba(229, 124, 35, 0.6));
 }
 
+.white{
+  color: white;
+}
