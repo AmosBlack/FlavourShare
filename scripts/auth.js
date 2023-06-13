@@ -1,22 +1,15 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 import { auth } from "./posts.js";
 import { DB } from "./posts.js";
-import { getDatabase, ref, push, onValue, remove, onChildAdded } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
-
-//initialize db
-const userNodeInDB = ref(DB, "/users/")
+import { ref, set } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 
 
 //initialize variables
 const authButton = document.getElementById("login-button")
+const unAuthButton = document.getElementById("logout-button")
 const authContainer = document.getElementById("auth-container")
-
-//login event
-authButton.addEventListener("click", () => {
-    createDialog(authContainer).showModal()
-
-})
-
+//recipe form element
+const recipeForm = document.getElementById("recipe-container")
 
 //signup func
 const userSignUp = async (email, pwd, ign) => {
@@ -53,20 +46,13 @@ const userSignIn = async (email, pwd, ign) => {
 //update ui with login status
 const checkAuthState = async () => {
     onAuthStateChanged(auth, user => {
-        if (user) {//update to work with new app
-            // //if logged in show shopping list
-            // divAuthentication.style.display = "none"
-            // divShopping.style.display = "flex"
-            // userNameView(user.email)
-            // userKey = user.uid
-            // shoppingListInDB = ref(database, `users/${userKey}`)
-            // updateList(shoppingListInDB,userKey)
+        if (user) {
+            recipeForm.style.display = "block"
+            console.log(recipeForm.style.display)
 
         }
         else {
-            // //if logged out show auth page
-            // divAuthentication.style.display = "flex "
-            // divShopping.style.display = "none"
+            recipeForm.style.display = "none"
         }
     })
 }
@@ -74,8 +60,28 @@ const checkAuthState = async () => {
 //signout func
 const userSignOut = async () => {
     await signOut(auth)
+    console.log("user signed out")
     // emptyAuthForm()
 }
+
+
+
+
+
+
+//login event
+authButton.addEventListener("click", () => {
+    createDialog(authContainer).showModal()
+
+})
+//logout event
+unAuthButton.addEventListener("click",() => {
+    userSignOut()
+})
+
+checkAuthState()
+
+
 
 function createDialog(parent) {
     //create modal element
@@ -126,6 +132,6 @@ function userSetup(uid, ign) {
     var userData = {
         "username":ign
     }
-    userLoc.set(userData)
+    set(userLoc,userData)
     
 }
