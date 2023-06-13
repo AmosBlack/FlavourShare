@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./styles/style.css">
@@ -20,11 +20,14 @@
     <div class="right-aligned">
       <a href="index.html" class="button">Posts</a>
       <a href="write.html" class="button">Write</a>
-      <a href="#" class="button">Login</a>
+      <button class="button" id="login-button">Login</button>
     </div>
   </nav>
-
-  <div class="container">
+  <div id="auth-container">
+    
+  </div>
+  <div class="container"> 
+    
     <h1>Recipes</h1>
     <p>Discover and share amazing recipes from around the world.</p>
     
@@ -42,6 +45,7 @@
   </div>
 
   <script src="./scripts/posts.js" type="module"></script>
+  <script src="./scripts/auth.js" type="module"></script>
 </body>
 
 </html>

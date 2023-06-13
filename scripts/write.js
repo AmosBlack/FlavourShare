@@ -1,4 +1,3 @@
-import { auth } from "./posts.js";
 import { DB, postsInDB } from "./posts.js";
 import { push } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
 

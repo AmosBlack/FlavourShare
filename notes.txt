@@ -3,8 +3,10 @@ _/json output
 _/firebase output
 _/firebase input
 _ authentication
+_ recipe del/editing
 _ filtration
+_ relayout hebbars kitchen
+_ like rxn
 _ pagination    
 _ pdf generator
 _ error highlighing/no alerts
-_ recipe del
