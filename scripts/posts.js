@@ -30,12 +30,10 @@ onValue(postsInDB, function (snapshot) {
   //db data
   var posts = snapshot.val()
   var posts_arr = Object.values(posts)
-  console.log(posts_arr)
 
   //empty list
   recipeCardContainerClear()
   //create card for each recipe
-  console.log(posts_arr.length)
   for (var i = 0; i < posts_arr.length; i++) {
     var recipeUnit = posts_arr[i]
     recipeCardCreate(recipeUnit)

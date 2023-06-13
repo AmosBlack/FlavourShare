@@ -12,6 +12,8 @@
 
 /* Recipe container */
 #recipe-container {
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-color);
   padding: 20px;
   border-radius: 5px;
@@ -176,3 +178,4 @@ li:hover .dropdown {
 .white {
   color: white;
 }
+

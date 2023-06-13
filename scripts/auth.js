@@ -20,7 +20,7 @@ const userSignUp = async (email, pwd, ign) => {
 
         })
         .catch((error) => {
-            console.log(error)
+            alert(error)
         })
 }
 
@@ -35,7 +35,7 @@ const userSignIn = async (email, pwd, ign) => {
 
         })
         .catch((error) => {
-            console.log(error)
+            alert(error)
             // handleAuthError(error) <- implement function from grocerypad
         })
 
@@ -46,7 +46,6 @@ const userSignIn = async (email, pwd, ign) => {
 //signout func
 const userSignOut = async () => {
     await signOut(auth)
-    console.log("user signed out")
     // emptyAuthForm()
 }
 
@@ -88,7 +87,7 @@ function createDialog(parent) {
     inputSignin.id = "signin-button"
     inputSignin.innerHTML = "Signin"
     inputSignin.addEventListener("click", () => {
-        userSignIn(inputEmail.value, inputPassword.value,inputUsername.value)
+        userSignIn(inputEmail.value, inputPassword.value,inputUsername.value,false)
     })
 
     const inputSignup = document.createElement("button")
@@ -96,7 +95,7 @@ function createDialog(parent) {
     inputSignup.id = "signup-button"
     inputSignup.innerHTML = "Signup"
     inputSignup.addEventListener("click", () => {
-        userSignUp(inputEmail.value, inputPassword.value,inputUsername.value)
+        userSignUp(inputEmail.value, inputPassword.value,inputUsername.value,true)
     })
     //add modal to parent div
     dialog.appendChild(title)
@@ -109,7 +108,7 @@ function createDialog(parent) {
     return dialog
 }
 
-function userSetup(uid, ign) {
+function userSetup(uid, ign,signupBool) {
     //improve so it doesnt change username each time bruh
     var userLoc = ref(DB,`/users/${uid}/username`)
     set(userLoc,ign)

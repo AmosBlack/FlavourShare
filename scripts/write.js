@@ -26,7 +26,6 @@ const checkAuthState = async () => {
     onAuthStateChanged(auth, user => {
         if (user) {
             recipeForm.style.display = "block"
-            console.log(recipeForm.style.display)
 
         }
         else {
