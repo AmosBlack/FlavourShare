@@ -33,7 +33,7 @@ onValue(postsInDB, function (snapshot) {
   console.log(posts_arr)
 
   //empty list
-  recipeCardContainerClear(cardContainer)
+  recipeCardContainerClear()
   //create card for each recipe
   console.log(posts_arr.length)
   for (var i = 0; i < posts_arr.length; i++) {
@@ -43,8 +43,8 @@ onValue(postsInDB, function (snapshot) {
   }
 })
 
-function recipeCardContainerClear(container) {
-  container.innerHTML = ""
+function recipeCardContainerClear() {
+  cardContainer.innerHTML = ""
 
 }
 

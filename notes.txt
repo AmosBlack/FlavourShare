@@ -4,8 +4,9 @@ _/firebase output
 _/firebase input
 _/authentication
 _ authentication consequences
-    recipeform db append userID
-    user db append recipeformID
+    /recipeform db append userID
+    /user db append recipeformID
+    _username changeability
 _ recipe del/editing
 _ filtration
 _ relayout refer design

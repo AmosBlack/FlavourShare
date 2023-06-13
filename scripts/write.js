@@ -14,6 +14,8 @@ let instructionsButton = document.getElementById("instru-click")
 let ingredientsInput = document.getElementById("r-ingredient")
 let instructionsInput = document.getElementById("r-instruction")
 
+//recipe form element
+const recipeForm = document.getElementById("recipe-container")
 
 //mutable lists
 let ingredientsArr = []
@@ -28,10 +30,11 @@ const checkAuthState = async () => {
 
         }
         else {
-            recipeForm.style.display = "none"
+            recipeForm.innerHTML = "Login to Write Recipes"
         }
     })
 }
+checkAuthState()
 
 
 //push to firebase

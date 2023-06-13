@@ -8,8 +8,7 @@ import { ref, set } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-dat
 const authButton = document.getElementById("login-button")
 const unAuthButton = document.getElementById("logout-button")
 const authContainer = document.getElementById("auth-container")
-//recipe form element
-const recipeForm = document.getElementById("recipe-container")
+
 
 //signup func
 const userSignUp = async (email, pwd, ign) => {
@@ -43,19 +42,6 @@ const userSignIn = async (email, pwd, ign) => {
 
 }
 
-//update ui with login status
-const checkAuthState = async () => {
-    onAuthStateChanged(auth, user => {
-        if (user) {
-            recipeForm.style.display = "block"
-            console.log(recipeForm.style.display)
-
-        }
-        else {
-            recipeForm.style.display = "none"
-        }
-    })
-}
 
 //signout func
 const userSignOut = async () => {
@@ -78,8 +64,6 @@ authButton.addEventListener("click", () => {
 unAuthButton.addEventListener("click",() => {
     userSignOut()
 })
-
-checkAuthState()
 
 
 
@@ -127,11 +111,7 @@ function createDialog(parent) {
 
 function userSetup(uid, ign) {
     //improve so it doesnt change username each time bruh
-    var userLoc = ref(DB,`/users/${uid}`)
+    var userLoc = ref(DB,`/users/${uid}/username`)
+    set(userLoc,ign)
 
-    var userData = {
-        "username":ign
-    }
-    set(userLoc,userData)
-    
 }
