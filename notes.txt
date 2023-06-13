@@ -4,9 +4,11 @@ _/firebase output
 _/firebase input
 _/authentication
 _ authentication consequences
+    recipeform db append userID
+    user db append recipeformID
 _ recipe del/editing
 _ filtration
-_ relayout hebbars kitchen
+_ relayout refer design
 _ like rxn
 _ pagination    
 _ pdf generator

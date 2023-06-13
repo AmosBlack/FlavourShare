@@ -1,6 +1,6 @@
-import { DB, postsInDB } from "./posts.js";
-import { push } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
-
+import { DB, postsInDB, auth } from "./posts.js";
+import { push,ref } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 //elements
 let title = document.getElementById("r-title")
 let author = document.getElementById("r-author")
@@ -19,22 +19,48 @@ let instructionsInput = document.getElementById("r-instruction")
 let ingredientsArr = []
 let instructionsArr = []
 
+
+const checkAuthState = async () => {
+    onAuthStateChanged(auth, user => {
+        if (user) {
+            recipeForm.style.display = "block"
+            console.log(recipeForm.style.display)
+
+        }
+        else {
+            recipeForm.style.display = "none"
+        }
+    })
+}
+
+
 //push to firebase
 submitButton.addEventListener("click", () => {
-    var recipe = {
-        "author": author.value,
-        "image": image.value,
-        "ingredients": ingredientsArr,
-        "instructions": instructionsArr,
-        "name": title.value
-    }
-    if (checkFormSubmittable(recipe)) {
-        push(postsInDB, recipe)
-        clearForm()
-    }
-    else {
-        alert("Form isnt filled properly")
-    }
+    let authorID
+    onAuthStateChanged(auth, user => {
+        if (user) {
+            authorID = user.uid
+
+            var recipe = {
+                "name": title.value,
+                "author": author.value,
+                "image": image.value,
+                "ingredients": ingredientsArr,
+                "instructions": instructionsArr,
+                "authorID": authorID,
+            }
+            if (checkFormSubmittable(recipe)) {
+                var recipeData = push(postsInDB, recipe)
+                var recipeKey = recipeData.key
+                var userRecipeLoc = ref(DB,`/users/${authorID}/recipes/`)
+                var userRecipeIDStorage = push(userRecipeLoc,recipeKey)
+                clearForm()
+            }
+            else {
+                alert("Form isnt filled properly")
+            }
+        }
+    })
 })
 
 //add item to list
