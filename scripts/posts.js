@@ -26,13 +26,23 @@ export const postsInDB = ref(DB, `/posts/`)
 //card container
 const cardContainer = document.getElementById('recipe-cards');
 
+
+
+function recipeCardContainerClear(container) {
+  if(container){
+    container.innerHTML = ""
+  }
+
+}
+
+
 onValue(postsInDB, function (snapshot) {
   //db data
   var posts = snapshot.val()
   var posts_arr = Object.values(posts)
 
   //empty list
-  recipeCardContainerClear()
+  recipeCardContainerClear(cardContainer)
   //create card for each recipe
   for (var i = 0; i < posts_arr.length; i++) {
     var recipeUnit = posts_arr[i]
@@ -41,10 +51,6 @@ onValue(postsInDB, function (snapshot) {
   }
 })
 
-function recipeCardContainerClear() {
-  cardContainer.innerHTML = ""
-
-}
 
 function recipeCardCreate(recipe) {
   //empty container
@@ -141,5 +147,8 @@ function recipeCardCreate(recipe) {
   card.appendChild(dialog)
 
   //append card to container
-  cardContainer.appendChild(card)
+  if(cardContainer && card){
+    cardContainer.appendChild(card)
+
+  }
 }

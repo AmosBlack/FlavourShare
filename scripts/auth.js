@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 import { auth } from "./posts.js";
 import { DB } from "./posts.js";
 import { ref, set } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
@@ -69,6 +69,7 @@ unAuthButton.addEventListener("click",() => {
 function createDialog(parent) {
     //create modal element
     const dialog = document.createElement("dialog")
+    dialog.id = "auth-form"
     const title = document.createElement('h1')
     title.innerHTML = "Authentication"
     //input setup
