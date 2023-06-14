@@ -11,13 +11,11 @@ const authContainer = document.getElementById("auth-container")
 
 
 //signup func
-const userSignUp = async (email, pwd, ign) => {
+const userSignUp = async (email, pwd, dialog) => {
     //create acc
-    createUserWithEmailAndPassword(auth, email, pwd,ign)
+    createUserWithEmailAndPassword(auth, email, pwd)
         .then((userCredential) => {
-            var userID = userCredential.user.uid
-            userSetup(userID,ign)
-
+            dialog.close()
         })
         .catch((error) => {
             alert(error)
@@ -25,14 +23,12 @@ const userSignUp = async (email, pwd, ign) => {
 }
 
 //signin func
-const userSignIn = async (email, pwd, ign) => {
+const userSignIn = async (email, pwd,dialog) => {
 
     //signin
-    signInWithEmailAndPassword(auth, email, pwd,ign)
+    signInWithEmailAndPassword(auth, email, pwd)
         .then((userCredential) => {
-            var userID = userCredential.user.uid
-            userSetup(userID,ign)
-
+            dialog.close()
         })
         .catch((error) => {
             alert(error)
@@ -65,7 +61,7 @@ unAuthButton.addEventListener("click",() => {
 })
 
 
-
+let inputUsername,inputEmail, inputPassword
 function createDialog(parent) {
     //create modal element
     const dialog = document.createElement("dialog")
@@ -73,13 +69,11 @@ function createDialog(parent) {
     const title = document.createElement('h1')
     title.innerHTML = "Authentication"
     //input setup
-    const inputUsername = document.createElement("input")
-    inputUsername.type = "text"
-    inputUsername.placeholder = "Username"
-    const inputEmail = document.createElement("input")
+    
+    inputEmail = document.createElement("input")
     inputEmail.type = "email"
     inputEmail.placeholder = "Email"
-    const inputPassword = document.createElement("input")
+    inputPassword = document.createElement("input")
     inputPassword.type = "password"
     inputPassword.placeholder = "Password"
     //signin/signup button
@@ -88,7 +82,7 @@ function createDialog(parent) {
     inputSignin.id = "signin-button"
     inputSignin.innerHTML = "Signin"
     inputSignin.addEventListener("click", () => {
-        userSignIn(inputEmail.value, inputPassword.value,inputUsername.value,false)
+        userSignIn(inputEmail.value, inputPassword.value,dialog)
     })
 
     const inputSignup = document.createElement("button")
@@ -96,22 +90,14 @@ function createDialog(parent) {
     inputSignup.id = "signup-button"
     inputSignup.innerHTML = "Signup"
     inputSignup.addEventListener("click", () => {
-        userSignUp(inputEmail.value, inputPassword.value,inputUsername.value,true)
+        userSignUp(inputEmail.value, inputPassword.value,dialog)
     })
     //add modal to parent div
     dialog.appendChild(title)
-    dialog.appendChild(inputUsername)
     dialog.appendChild(inputEmail)
     dialog.appendChild(inputPassword)
     dialog.appendChild(inputSignin)
     dialog.append(inputSignup)
     parent.appendChild(dialog)
     return dialog
-}
-
-function userSetup(uid, ign,signupBool) {
-    //improve so it doesnt change username each time bruh
-    var userLoc = ref(DB,`/users/${uid}/username`)
-    set(userLoc,ign)
-
 }

@@ -29,7 +29,7 @@ const checkAuthState = async () => {
 
         }
         else {
-            recipeForm.innerHTML = "Login to Write Recipes"
+            recipeForm.innerHTML = "Signin to Write Recipes"
         }
     })
 }
