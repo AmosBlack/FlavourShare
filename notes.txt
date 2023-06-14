@@ -1,16 +1,7 @@
-_/manual output
-_/json output
-_/firebase output
-_/firebase input
-_/authentication
-_ authentication consequences
-    /recipeform db append userID
-    /user db append recipeformID
-    _username changeability
-_ recipe del/editing
-_ filtration
+_ recipe-tag sorting
+_ home page with trending/latest/tip
 _ relayout refer design
-_ like rxn
+_ like and unlike
 _ pagination    
-_ pdf generator
 _ error highlighing/no alerts
+_ better login
