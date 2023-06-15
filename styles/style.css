@@ -241,3 +241,8 @@ input{
 input:focus{
   border: 2px solid var(--secondary-color);
 }
+
+#search-input{
+  width: 60%;
+  max-width: 500px;
+}
