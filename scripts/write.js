@@ -71,7 +71,7 @@ ingredientsButton.addEventListener("click", () => {
     if (!ifEmpty(ingredientsInput)) {
         ingredientsArr.push(ingredientsInput.value)
         ingredientsInput.value = ""
-        appendItemToHTMLArray(ingredientsArr, ingredientsArrEl, ingredientsInput)
+        appendItemToHTMLArray(ingredientsArr, ingredientsArrEl, ingredientsInput, ingredientsButton)
     }
     else {
         //replace alert with side modal
@@ -85,45 +85,46 @@ instructionsButton.addEventListener("click", () => {
     if (!ifEmpty(instructionsInput)) {
         instructionsArr.push(instructionsInput.value)
         instructionsInput.value = ""
-        appendItemToHTMLArray(instructionsArr, instructionsArrEl, instructionsInput)
+        appendItemToHTMLArray(instructionsArr, instructionsArrEl, instructionsInput,instructionsButton)
     }
 })
 
 let arr_li_item, editing
-function appendItemToHTMLArray(arr, ul, input) {
-    ul.innerHTML = "";
+function appendItemToHTMLArray(arr, ul, input,button) {
+  ul.innerHTML = "";
 
-    for (var i = 0; i < arr.length; i++) {
-        (function (index) {
-            var arr_li_item = arr[index];
+  for (var i = 0; i < arr.length; i++) {
+    (function(index) {
+      var arr_li_item = arr[index];
 
-            var li = document.createElement("li");
-            li.innerHTML = arr_li_item;
+      var li = document.createElement("li");
+      li.innerHTML = arr_li_item;
 
-            var dropdown = document.createElement("div");
-            dropdown.classList.add("dropdown");
+      var dropdown = document.createElement("div");
+      dropdown.classList.add("dropdown");
 
-            var delEl = document.createElement("button");
-            delEl.innerHTML = "DEL";
-            delEl.addEventListener("click", function () {
-                li.remove();
-                arr.splice(index, 1);
-            });
+      var delEl = document.createElement("button");
+      delEl.innerHTML = "DEL";
+      delEl.addEventListener("click", function() {
+        li.remove();
+        arr.splice(index, 1);
+        appendItemToHTMLArray(arr, ul, input); 
+      });
 
-            var editEl = document.createElement("button");
-            editEl.innerHTML = "EDIT";
-            editEl.addEventListener("click", function () {
-                input.value = arr_li_item;
-                editing = true;
-            });
+      var editEl = document.createElement("button");
+      editEl.innerHTML = "EDIT";
+      editEl.addEventListener("click", function() {
+        input.value = arr_li_item;
+        editing = true;
+      });
 
-            dropdown.appendChild(delEl);
-            dropdown.appendChild(editEl);
-            li.appendChild(dropdown);
+      dropdown.appendChild(delEl);
+      dropdown.appendChild(editEl);
+      li.appendChild(dropdown);
 
-            ul.appendChild(li);
-        })(i);
-    }
+      ul.appendChild(li);
+    })(i);
+  }
 }
 
 

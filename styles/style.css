@@ -226,3 +226,16 @@ button:hover {
 input{
   outline: none;
 }
+
+input{
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  font-size: 0.8em;
+  color: black;
+  font-weight: 900;
+}
+
+input:focus{
+  border: 2px solid var(--secondary-color);
+}

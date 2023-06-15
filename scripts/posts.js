@@ -87,10 +87,12 @@ function recipeCardCreate(recipe) {
   //title
   const title = document.createElement('h2')
   title.innerHTML = recipe.name
+  title.classList.add("title")
   preview.appendChild(title)
   //subtitle
   const subtitle = document.createElement("p")
   subtitle.innerHTML = recipe.author
+  subtitle.classList.add("subtitle")
   preview.appendChild(subtitle)
 
   //x button
