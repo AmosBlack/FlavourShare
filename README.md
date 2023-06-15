@@ -15,7 +15,7 @@
 2. Open recipes tab and click on whichever recipe you want to view
 3. Search for any specific recipe or author through the keyword filter
 4. Go to the write tab and publish your own recipes
-5. You are good to go !s
+5. You are good to go !
 
 # Latest Changes
 New search function for searching recipes with keyword
