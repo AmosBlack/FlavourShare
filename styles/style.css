@@ -230,11 +230,12 @@ input{
 
 input{
   border-radius: 10px;
-  border: 2px solid var(--primary-color);
+  border: 2px solid #333;
   padding: 10px;
   font-size: 0.8em;
   color: black;
   font-weight: 900;
+  transition: ease 0.2s;
 }
 
 input:focus{
